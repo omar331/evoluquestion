@@ -1,0 +1,25 @@
+version: '2'
+services:
+    front_dev:
+        build: ./build
+        image: evoluttobr/evolupage_dev:lastest
+        container_name: evolupage_dev
+        command: /opt/scripts/run-task
+        ports:
+            - "7000:7000"
+        volumes:
+            # local de desenvolvimento da aplicacao
+            - ..:/opt/front-dev
+
+            # chaves ssh para serem usadas em deploys remotos
+            - ~/.ssh:/opt/ssh-keys
+
+            # ambiente para deploy local (usado para testes no ambiente local)
+            - ${PROD_LOCAL_ROOT_DIR}:/opt/prod_local
+        environment:
+          - DEV_TASK=${DEV_TASK}
+          - ENTRYPOINT=${ENTRYPOINT}
+          - ENVIRONMENT_TASK=${ENVIRONMENT}
+          - APPLICATION_TASK=${APPLICATION}
+          - DEPLOY_SERVER=${DEPLOY_SERVER}
+          - CONFIGS=${CONFIGS}

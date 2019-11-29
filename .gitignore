@@ -1,0 +1,10 @@
+./build/*
+./dist/*
+.idea/evolupage.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/*
+node_modules/
+package-lock.json
