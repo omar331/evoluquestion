@@ -1,0 +1,24 @@
+.question {
+    margin-bottom: 2em;
+}
+
+.question .body {
+    font-size: 1.2em;
+    color: navy;
+}
+
+.question.question-editing {
+    background: #9CAF3F;
+    font-size: 1.5em;
+}
+
+.question .type_description {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.choices {
+    font-size: 0.9em;
+    margin-top: 1em;
+    margin-left: 2em;
+}
